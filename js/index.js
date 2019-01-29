@@ -1,3 +1,9 @@
+// Place footer text on window load
+window.onload = function () {
+    const injectFooter = document.querySelector('footer p');
+    injectFooter.textContent = 'Copyright Fun Bus 2018';
+}
+
 // Team Fun Bus Easter Egg
 const funBus = document.querySelector('.logo-heading');
 
@@ -38,5 +44,14 @@ boldP.forEach(p => {
 boldP.forEach(p => {
     p.addEventListener('dblclick', e => {
         e.currentTarget.style.fontSize = '16px';
+    })
+})
+
+// Image drag sets img to display none
+const imageDrag = document.querySelectorAll('img');
+
+imageDrag.forEach(img => {
+    img.addEventListener('drag', e => {
+        e.currentTarget.style.display = 'none';
     })
 })
