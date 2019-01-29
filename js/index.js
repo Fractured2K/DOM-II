@@ -25,3 +25,18 @@ navHover.forEach(el => {
         e.currentTarget.style.color = 'black';
     })
 })
+
+// Bolder Paragraph
+const boldP = document.querySelectorAll('p');
+
+boldP.forEach(p => {
+    p.addEventListener('click', (e) => {
+        e.currentTarget.style.fontSize = '30px';
+    })
+})
+
+boldP.forEach(p => {
+    p.addEventListener('dblclick', e => {
+        e.currentTarget.style.fontSize = '16px';
+    })
+})
