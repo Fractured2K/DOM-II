@@ -56,6 +56,21 @@ navHover.forEach(el => {
     })
 })
 
+const navClick = document.querySelectorAll('header nav a');
+
+navClick.forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+    })
+})
+
+const navChangeBackground = document.querySelector('header nav');
+
+navChangeBackground.addEventListener('click', e => {
+    e.currentTarget.style.background = 'black';
+})
+
 // Bolder Paragraph
 const boldP = document.querySelectorAll('p');
 
