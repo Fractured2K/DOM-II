@@ -55,3 +55,11 @@ imageDrag.forEach(img => {
         e.currentTarget.style.display = 'none';
     })
 })
+
+// Keylog Scare
+let keys = [];
+window.addEventListener('keydown', e => {
+    keys.push(e.key)
+    console.log(keys.toString())
+    document.querySelector('.home header p').textContent = keys.join('');
+})
