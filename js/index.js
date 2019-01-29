@@ -1,7 +1,17 @@
 // Place footer text on window load
-window.onload = function () {
+window.onload = () => {
     const injectFooter = document.querySelector('footer p');
     injectFooter.textContent = 'Copyright Fun Bus 2018';
+}
+
+// Random title generator for heading
+window.onscroll = () => {
+    const randomSelect = document.querySelector('h2');
+    const randomTitle = ['Lorem ipsum', 'Consectetur adipiscing elit', 'Sed accumsan ante turpis'];
+
+    const rngTitle = Math.floor(Math.random() * randomTitle.length);
+
+    randomSelect.textContent = randomTitle[rngTitle];
 }
 
 // Team Fun Bus Easter Egg
